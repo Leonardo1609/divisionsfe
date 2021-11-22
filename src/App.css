@@ -1,0 +1,333 @@
+/* ---------------*/
+/* ---- Reset ----*/
+/* ---------------*/
+:root {
+	--sky-blue: #1890ff;
+	--red-notification: #ea6364;
+	--white: #ffffff;
+	--gray: #a6a6a6;
+	--gray-border: #ede9e9;
+	--beige: #f9f9f9;
+	--gray-total: #979797;
+	--gradient-blue: #56a7f2;
+	--active-blue: #5774fa;
+}
+
+html {
+	font-size: 62.5%;
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+body {
+	font-size: 1.6rem;
+	line-height: 1.5;
+	background-color: var(--beige);
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+}
+img {
+	max-width: 100%;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 2rem;
+}
+
+/* ---------------*/
+/* --- Header --- */
+/* ---------------*/
+.header {
+	width: 100%;
+	background: linear-gradient(
+			270deg,
+			var(--gradient-blue) 27.97%,
+			rgba(255, 255, 255, 0) 83.44%
+		),
+		#2e52f8;
+}
+
+.header-container {
+	display: flex;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	justify-content: space-between;
+}
+
+/* ---------------*/
+/* --- Navbar --- */
+/* ---------------*/
+.navbar {
+	display: flex;
+	align-items: center;
+	font-size: 1.4rem;
+}
+
+.navbar__logo {
+	margin-right: 26px;
+}
+
+.navbar__list {
+	background-color: transparent !important;
+	color: white;
+	border-bottom: unset !important;
+}
+
+.navbar__icon,
+.down-icon {
+	margin-left: 0.8rem;
+}
+
+.navbar__link {
+	margin: 0 0.2rem;
+}
+
+.navbar__link:hover {
+	opacity: 0.1;
+	background: var(--active-blue);
+}
+
+.navbar__link.ant-menu-item-active,
+.navbar__link.ant-menu-item-selected {
+	color: white !important;
+	border-bottom: unset !important;
+	border-radius: 0.4rem;
+	background: var(--active-blue);
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item:hover::after,
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected::after {
+	border-bottom: unset !important;
+}
+
+.ant-menu-horizontal > .ant-menu-item::after {
+	border-bottom: unset !important;
+}
+
+/* ------------------- */
+/* --- AvatarIcons --- */
+/* ------------------- */
+.avatar-icons {
+	display: flex;
+	align-items: center;
+}
+
+.avatar-icons__letter {
+	display: inline-block;
+	background-image: url("./assets/images/letter_container.png");
+	height: 40px;
+	width: 40px;
+	border-radius: 50%;
+	text-align: center;
+	margin-right: 1rem;
+	line-height: 2.8;
+}
+
+/* ------------------ */
+/* --- HeaderIcons ---*/
+/* ------------------ */
+.header-icons {
+	color: white;
+}
+
+.header-icons__list {
+	display: flex;
+}
+
+.header-icons__icon {
+	margin: 0 2rem;
+	position: relative;
+}
+
+.header-icons__icon-notification {
+	position: absolute;
+	right: -0.5rem;
+	top: 0rem;
+	background-color: var(--red-notification);
+	width: 1.2rem;
+	height: 1.2rem;
+	border-radius: 50%;
+	font-size: 0.8rem;
+	text-align: center;
+}
+
+/* ----------------- */
+/* --- IconButton ---*/
+/* ----------------- */
+.icon-button {
+	cursor: pointer;
+	height: 28px;
+	width: 28px;
+	background-color: var(--sky-blue);
+	color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.6rem;
+	outline: none;
+	border: none;
+	border-radius: 0.2rem;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+
+.icon-button.light {
+	background-color: var(--white);
+	color: var(--sky-blue);
+}
+
+/* ---------------------- */
+/* --- DivisionHeader --- */
+/* ---------------------- */
+.division-header {
+	padding-top: 2rem;
+	border-bottom: 1px solid var(--gray-border);
+	background-color: var(--white);
+}
+.division-header__main {
+}
+.division-header__title {
+	padding-left: 1rem;
+	font-size: 1.6rem;
+	margin-bottom: 2rem;
+}
+
+.division-header__tabs {
+	display: flex;
+	margin-bottom: 0.8rem;
+}
+
+.division-header__tab {
+	font-size: 1.4rem;
+	padding: 0 1rem;
+	margin-right: 1rem;
+	color: var(--gray);
+	cursor: pointer;
+}
+
+.division-header__tab-active {
+	color: var(--sky-blue);
+	position: relative;
+}
+
+.division-header__tab-active::after {
+	content: "";
+	position: absolute;
+	bottom: -1rem;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: var(--sky-blue);
+}
+
+.division-header__icons {
+	display: flex;
+	justify-content: end;
+	align-items: center;
+}
+
+.division-header__icon {
+	margin-left: 10px;
+}
+
+/* ---------------------- */
+/* --- DivisionScreen --- */
+/* ---------------------- */
+.division__main {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 18px;
+}
+
+.division__option {
+	border: 1px solid var(--gray);
+	color: var(--gray);
+	padding: 5px 9px;
+	font-size: 1.4rem;
+	cursor: pointer;
+}
+
+.division__option:first-child {
+	border-radius: 4px 0 0 4px;
+}
+
+.division__option:last-child {
+	border-radius: 0 4px 4px 0;
+}
+
+.division__option-active {
+	border: 1px solid var(--sky-blue);
+	color: var(--sky-blue);
+}
+
+.division__search {
+	justify-content: flex-end;
+}
+
+.division__table {
+	margin-top: 32px;
+}
+
+/* -----------------------*/
+/* --- SearchDivision --- */
+/* -----------------------*/
+.search__form {
+	font-size: 1.4rem;
+	position: relative;
+}
+
+.search__input {
+	border-radius: 4px;
+	border: 1px solid var(--gray-border);
+	padding: 5px 22px 5px 10px;
+	width: 214px;
+}
+
+.search__select {
+	border-radius: 4px;
+	border: 1px solid var(--gray-border);
+	padding: 5px 22px 5px 10px;
+	margin-right: 1rem;
+	width: 154px;
+}
+
+.search__input:focus-visible,
+.search__select:focus-visible {
+	outline: none;
+}
+
+.search__button {
+	background-color: transparent;
+	border: none;
+	color: var(--gray);
+	cursor: pointer;
+	font-size: 1.4rem;
+	outline: none;
+	position: absolute;
+	right: 4px;
+	top: calc(50% - 1.25rem);
+}
+/* --------------------- */
+/* --- DivisionTable --- */
+/* --------------------- */
+.table {
+	position: relative;
+}
+
+.table__total {
+	position: absolute;
+	bottom: 1.2rem;
+	color: var(--gray-total);
+	font-size: 1.4rem;
+}
